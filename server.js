@@ -33,7 +33,7 @@ import path from "path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url)); // because we're using ES6-modules not common.js
 
-app.use(express.static(path.resolve(__dirname, "../client/build"))); // static assets
+app.use(express.static(path.resolve(__dirname, "./client/build"))); // static assets
 
 if (process.env.NODE_ENV !== "production") {
   app.use(morgan("dev"));
@@ -52,7 +52,7 @@ app.use("/api/v1/jobs", authenticateUser, jobsRouter);
 
 // direct to index.html for react-router after the 2 routes above
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
+  res.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
 });
 
 app.use(notFoundMiddleware);
