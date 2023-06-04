@@ -6,7 +6,7 @@ import dotenv from "dotenv";
 dotenv.config();
 const port = process.env.PORT || 5000;
 
-// ------------DB & AuthenticateUser------------ //
+// ------------DB & AuthenticateUser------------ // commit
 import connectDB from "./db/connect.js";
 import morgan from "morgan";
 
