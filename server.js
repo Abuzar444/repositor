@@ -62,7 +62,7 @@ const start = async () => {
   try {
     await connectDB(process.env.MONGO_URL);
 
-    // only connect to server if successfully-connected to DB
+    // only connect to server if successfully-connected to DB test
     app.listen(port, () =>
       console.log(`Server is listening on http://localhost:${port}`)
     );
